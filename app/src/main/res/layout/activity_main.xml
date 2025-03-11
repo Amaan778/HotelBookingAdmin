@@ -9,7 +9,11 @@
     android:background="@color/themecolor"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hotel Booking Admin"
+        android:textSize="@dimen/_20sdp"/>
 
 </LinearLayout>
