@@ -8,12 +8,21 @@
     android:layout_height="match_parent"
     android:background="@color/themecolor"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
-    
+
+    <ImageView
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:src="@drawable/hotelsplash"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hotel Booking Admin"
-        android:textSize="@dimen/_20sdp"/>
+        android:textSize="@dimen/_25sdp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/white"
+        android:gravity="center"/>
 
 </LinearLayout>
