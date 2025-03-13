@@ -8,4 +8,141 @@
     android:layout_height="match_parent"
     tools:context=".Dashboard">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:orientation="vertical"
+        android:background="@drawable/background">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/hotelsplash"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HotelBooking Admin"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Control full application here"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:text="Create Category"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/_9sdp"
+                android:padding="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/manageallservice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:text="Manage All Services"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/_9sdp"
+                android:padding="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/bookings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:text="View All Bookings"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/_9sdp"
+                android:padding="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:text="Create Slider Images"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/_9sdp"
+                android:padding="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:text="Create Notification"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/_9sdp"
+                android:padding="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:text="Feedbacks"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/_9sdp"
+                android:padding="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn"
+                android:text="Manage Login"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/_9sdp"
+                android:padding="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="@font/poppins"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>
