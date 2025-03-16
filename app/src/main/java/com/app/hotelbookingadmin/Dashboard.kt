@@ -23,6 +23,10 @@ class Dashboard : AppCompatActivity() {
         category=findViewById(R.id.category)
         manageallservice=findViewById(R.id.manageallservice)
         bookings=findViewById(R.id.bookings)
+        slider=findViewById(R.id.slider)
+        notification=findViewById(R.id.notification)
+        feedback=findViewById(R.id.feedback)
+        login=findViewById(R.id.login)
 
     }
 }
