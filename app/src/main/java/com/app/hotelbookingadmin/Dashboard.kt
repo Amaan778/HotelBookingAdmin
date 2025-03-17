@@ -29,9 +29,7 @@ class Dashboard : AppCompatActivity() {
         feedback=findViewById(R.id.feedback)
         login=findViewById(R.id.login)
 
-        login.setOnClickListener {
-            startActivity(Intent(this,Chat::class.java))
-        }
+
 
     }
 }
