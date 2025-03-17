@@ -1,5 +1,6 @@
 package com.app.hotelbookingadmin
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -27,6 +28,10 @@ class Dashboard : AppCompatActivity() {
         notification=findViewById(R.id.notification)
         feedback=findViewById(R.id.feedback)
         login=findViewById(R.id.login)
+
+        login.setOnClickListener {
+            startActivity(Intent(this,Chat::class.java))
+        }
 
     }
 }
