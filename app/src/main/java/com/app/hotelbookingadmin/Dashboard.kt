@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.app.hotelbookingadmin.addhotel.AddHotel
 
 class Dashboard : AppCompatActivity() {
     private lateinit var category:TextView
@@ -29,7 +30,9 @@ class Dashboard : AppCompatActivity() {
         feedback=findViewById(R.id.feedback)
         login=findViewById(R.id.login)
 
-
+        manageallservice.setOnClickListener {
+            startActivity(Intent(this,AddHotel::class.java))
+        }
 
     }
 }
