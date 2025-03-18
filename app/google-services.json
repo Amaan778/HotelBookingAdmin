@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "378526682749",
+    "firebase_url": "https://serviceprovideradmin-1cc0d-default-rtdb.firebaseio.com",
+    "project_id": "serviceprovideradmin-1cc0d",
+    "storage_bucket": "serviceprovideradmin-1cc0d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378526682749:android:c080f08fa814d4355eab14",
+        "android_client_info": {
+          "package_name": "com.app.hotelbookingadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPZwoBfafuqhYc8dk4V3FQSkKlABpjIiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378526682749:android:d0b6e78c9e5d5ca15eab14",
+        "android_client_info": {
+          "package_name": "com.app.serviceprovideradmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPZwoBfafuqhYc8dk4V3FQSkKlABpjIiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378526682749:android:e4c127c9790fb2b15eab14",
+        "android_client_info": {
+          "package_name": "com.app.serviceprovidercust"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPZwoBfafuqhYc8dk4V3FQSkKlABpjIiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
