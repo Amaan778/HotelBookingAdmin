@@ -63,7 +63,16 @@
 
             </LinearLayout>
 
-            
+            <TextView
+                android:layout_below="@id/off"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins"
+                android:layout_marginVertical="@dimen/_9sdp"
+                android:maxLines="1"/>
 
         </RelativeLayout>
 
