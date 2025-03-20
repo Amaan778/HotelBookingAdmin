@@ -96,7 +96,39 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/pricing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B9"
+                    android:textColor="@color/themecolor"
+                    android:textSize="@dimen/_15sdp"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="150"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/themecolor"
+                    android:fontFamily="@font/poppins"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  /night"
+                    android:textSize="@dimen/_13sdp"
+                    android:fontFamily="@font/poppins"/>
+
+            </LinearLayout>
 
         </RelativeLayout>
 
