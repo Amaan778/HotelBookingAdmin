@@ -64,6 +64,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/title"
                 android:layout_below="@id/off"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,8 +72,31 @@
                 android:textSize="@dimen/_15sdp"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins"
-                android:layout_marginVertical="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:maxLines="1"/>
+
+            <LinearLayout
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:src="@drawable/pin"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chembur, Mumbai 74"
+                    android:layout_gravity="center"
+                    android:maxLines="1"/>
+
+            </LinearLayout>
+
+
 
         </RelativeLayout>
 
