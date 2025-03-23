@@ -2,6 +2,8 @@ package com.app.hotelbookingadmin.addhotel
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +24,7 @@ import com.google.firebase.firestore.firestore
 class HotelDashboard : AppCompatActivity() {
     private lateinit var btn:FloatingActionButton
     private lateinit var recycler:RecyclerView
+    private lateinit var emptytext:TextView
     private var mList = ArrayList<HotelDataClass>()
     private lateinit var adapter: HotelRecycler
     var db = Firebase.firestore
@@ -32,6 +35,7 @@ class HotelDashboard : AppCompatActivity() {
 
         btn=findViewById(R.id.add)
         recycler=findViewById(R.id.recycler)
+        emptytext=findViewById(R.id.emptytext)
 
         btn.setOnClickListener {
             startActivity(Intent(this,AddHotel::class.java))
@@ -57,6 +61,15 @@ class HotelDashboard : AppCompatActivity() {
                 }
 
                 adapter?.notifyDataSetChanged()
+
+                if (mList.isEmpty()){
+                    emptytext.visibility=View.VISIBLE
+                    recycler.visibility= View.GONE
+                }
+                else{
+                    emptytext.visibility=View.GONE
+                    recycler.visibility=View.VISIBLE
+                }
             }
 
         })
