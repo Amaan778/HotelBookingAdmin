@@ -54,6 +54,7 @@
                     android:layout_gravity="center"/>
 
                 <TextView
+                    android:id="@+id/rates"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/_20sdp"
                     android:textSize="@dimen/_9sdp"
@@ -88,6 +89,7 @@
                     android:src="@drawable/pin"/>
 
                 <TextView
+                    android:id="@+id/addressdetail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Chembur, Mumbai 74"
