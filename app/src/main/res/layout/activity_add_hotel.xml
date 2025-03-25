@@ -43,4 +43,15 @@
         android:textSize="@dimen/_15sdp"
         android:layout_marginHorizontal="@dimen/_9sdp"/>
 
+    <Button
+        android:id="@+id/gallerybtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curved_btn"
+        android:text="Add Gallery images"
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/_15sdp"
+        android:layout_margin="@dimen/_9sdp"/>
+
+
 </LinearLayout>
