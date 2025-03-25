@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.app.hotelbookingadmin.addhotel.AddHotel
 import com.app.hotelbookingadmin.addhotel.HotelDashboard
+import com.app.hotelbookingadmin.login.LoginDetails
 
 class Dashboard : AppCompatActivity() {
     private lateinit var category:TextView
@@ -33,6 +34,10 @@ class Dashboard : AppCompatActivity() {
 
         manageallservice.setOnClickListener {
             startActivity(Intent(this,HotelDashboard::class.java))
+        }
+
+        login.setOnClickListener {
+            startActivity(Intent(this,LoginDetails::class.java))
         }
 
     }
