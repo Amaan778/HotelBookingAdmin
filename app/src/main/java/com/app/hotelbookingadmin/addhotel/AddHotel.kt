@@ -17,5 +17,11 @@ class AddHotel : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_hotel)
+
+        coverimg=findViewById(R.id.coverimg)
+        coverbtn=findViewById(R.id.coverbtn)
+        gallerybtn=findViewById(R.id.gallerybtn)
+
+
     }
 }
