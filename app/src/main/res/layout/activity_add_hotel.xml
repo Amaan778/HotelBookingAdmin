@@ -25,33 +25,145 @@
 
     </Toolbar>
 
-    <ImageView
-        android:id="@+id/coverimg"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_180sdp"
-        android:src="@drawable/hotelsplash"
-        android:background="@color/black"
-        android:layout_margin="@dimen/_9sdp"/>
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/coverbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/curved_btn"
-        android:text="Select Cover image"
-        android:fontFamily="@font/poppins"
-        android:textSize="@dimen/_15sdp"
-        android:layout_marginHorizontal="@dimen/_9sdp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/gallerybtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/curved_btn"
-        android:text="Add Gallery images"
-        android:fontFamily="@font/poppins"
-        android:textSize="@dimen/_15sdp"
-        android:layout_margin="@dimen/_9sdp"/>
+            <ImageView
+                android:id="@+id/coverimg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:src="@drawable/hotelsplash"
+                android:background="@color/black"
+                android:layout_margin="@dimen/_9sdp"/>
 
+            <Button
+                android:id="@+id/coverbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/curved_btn"
+                android:text="Select Cover image"
+                android:fontFamily="@font/poppins"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_9sdp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name of your Hotel"
+                app:endIconMode="custom"
+                android:background="@color/white"
+                android:layout_marginHorizontal="@dimen/_8sdp">
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourgummy"
+                    android:backgroundTint="@color/themecolor"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address Of your hotel"
+                app:endIconMode="custom"
+                android:background="@color/white"
+                android:layout_margin="@dimen/_8sdp">
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourgummy"
+                    android:backgroundTint="@color/themecolor"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ratingInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Rating"
+                    app:endIconMode="custom"
+                    android:background="@color/white"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="@dimen/_8sdp">
+
+                    <EditText
+                        android:id="@+id/rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourgummy"
+                        android:backgroundTint="@color/themecolor"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/offInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Discount percent"
+                    app:endIconMode="custom"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_marginHorizontal="@dimen/_8sdp">
+
+                    <EditText
+                        android:id="@+id/off"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourgummy"
+                        android:backgroundTint="@color/themecolor"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pricingInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter price of hotel per night"
+                app:endIconMode="custom"
+                android:background="@color/white"
+                android:layout_margin="@dimen/_8sdp">
+
+                <EditText
+                    android:id="@+id/pricing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourgummy"
+                    android:backgroundTint="@color/themecolor"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/gallerybtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/curved_btn"
+                android:text="Add Hotel"
+                android:fontFamily="@font/poppins"
+                android:textSize="@dimen/_15sdp"
+                android:layout_margin="@dimen/_9sdp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
