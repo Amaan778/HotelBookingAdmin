@@ -34,8 +34,9 @@ class AddHotel : AppCompatActivity() {
         pricing=findViewById(R.id.pricing)
 
         coverbtn.setOnClickListener {
-            
+
         }
 
     }
+
 }
