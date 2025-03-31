@@ -50,6 +50,17 @@ class AddHotel : AppCompatActivity() {
             startActivityForResult(intent, REQUEST_IMAGE_PICK)
         }
 
+        addhotelbtn.setOnClickListener {
+
+            val hotelname=title.text.toString()
+            val hoteladdress=address.text.toString()
+            val hotelrate=rating.text.toString()
+            val hoteloffer=off.text.toString()
+            val hotelprice=pricing.text.toString()
+
+
+        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
