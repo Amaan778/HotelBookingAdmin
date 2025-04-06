@@ -58,6 +58,25 @@ class AddHotel : AppCompatActivity() {
             val hoteloffer=off.text.toString()
             val hotelprice=pricing.text.toString()
 
+            if (hotelname.isEmpty()){
+                title.error="Required"
+            }
+            else if (hoteladdress.isEmpty()){
+                address.error="Required"
+            }
+            else if (hotelrate.isEmpty()){
+                rating.error="Required"
+            }
+            else if (hoteloffer.isEmpty()){
+                off.error="Required"
+            }
+            else if (hotelprice.isEmpty()){
+                pricing.error="Required"
+            }
+
+            else{
+                
+            }
 
         }
 
