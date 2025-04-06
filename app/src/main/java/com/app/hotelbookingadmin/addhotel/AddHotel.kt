@@ -75,7 +75,17 @@ class AddHotel : AppCompatActivity() {
             }
 
             else{
+
+                val data= hashMapOf(
+                    "hotelname" to hotelname,
+                    "hoteladdress" to hoteladdress,
+                    "hotelrating" to hotelrate,
+                    "hoteloffer" to hoteloffer,
+                    "hotelprice" to hotelprice
+                )
+
                 
+
             }
 
         }
