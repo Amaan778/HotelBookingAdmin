@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.app.hotelbookingadmin.R
+import com.google.firebase.storage.FirebaseStorage
 import com.yalantis.ucrop.UCrop
 import java.io.File
 
@@ -26,6 +27,8 @@ class AddHotel : AppCompatActivity() {
     private lateinit var rating:EditText
     private lateinit var off:EditText
     private lateinit var pricing:EditText
+    private var coverImageUri: Uri? = null // Cover image URI
+    private lateinit var storage: FirebaseStorage
 
     companion object {
         private const val REQUEST_IMAGE_PICK = 100
@@ -84,7 +87,25 @@ class AddHotel : AppCompatActivity() {
                     "hotelprice" to hotelprice
                 )
 
-                
+                coverImageUri?.let {uri->
+                    val coverfilename="cover_${System.currentTimeMillis()}.jpg"
+                    val storageref=storage.reference.child("images/$coverfilename")
+                    storageref.putFile(uri).addOnSuccessListener {
+                        storageref.downloadUrl.addOnSuccessListener {coverurl->
+                            data["coverimage"]=coverurl.toString()
+
+//                            here implement the data for title description and etc,
+                            
+
+                        }.addOnFailureListener {
+                            Toast.makeText(this,"error",Toast.LENGTH_LONG).show()
+                        }
+                    }
+                        .addOnFailureListener{
+                            Toast.makeText(this,"error",Toast.LENGTH_LONG).show()
+                        }
+
+                }
 
             }
 
