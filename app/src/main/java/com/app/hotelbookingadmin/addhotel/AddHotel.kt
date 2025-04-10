@@ -95,7 +95,8 @@ class AddHotel : AppCompatActivity() {
                             data["coverimage"]=coverurl.toString()
 
 //                            here implement the data for title description and etc,
-                            
+
+
 
                         }.addOnFailureListener {
                             Toast.makeText(this,"error",Toast.LENGTH_LONG).show()
