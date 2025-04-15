@@ -16,6 +16,7 @@
         android:background="@color/themecolor">
 
         <TextView
+            android:id="@+id/toolbars"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add Hotels"
@@ -24,5 +25,10 @@
             android:fontFamily="@font/poppins"/>
 
     </Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler"/>
 
 </LinearLayout>
