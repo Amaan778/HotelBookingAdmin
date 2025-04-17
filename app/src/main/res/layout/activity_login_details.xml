@@ -35,6 +35,7 @@
         android:gravity="center"/>
 
     <TextView
+        android:id="@+id/gmailtextview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/backgroundaquare"
@@ -45,6 +46,7 @@
         android:gravity="center"/>
 
     <TextView
+        android:id="@+id/passwordtextview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Your Password"
