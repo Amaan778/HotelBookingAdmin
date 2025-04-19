@@ -30,11 +30,11 @@ class HotelRecycler(private val context: Context, private val list:List<HotelDat
     }
 
     override fun onBindViewHolder(holder: Viewholder, position: Int) {
-        holder.title.text=list[position].title
-        holder.address.text=list[position].address
-        holder.price.text=list[position].price
-        holder.offpercent.text=list[position].off
-        holder.rate.text=list[position].rate
+        holder.title.text=list[position].hotelname
+        holder.address.text=list[position].hoteladdress
+        holder.price.text=list[position].hotelprice
+        holder.offpercent.text=list[position].hoteloffer
+        holder.rate.text=list[position].hotelrating
         Glide.with(context).load(list[position].CoverImage).into(holder.galler)
     }
 }
