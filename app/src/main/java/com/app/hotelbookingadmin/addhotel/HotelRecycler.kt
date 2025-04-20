@@ -35,6 +35,6 @@ class HotelRecycler(private val context: Context, private val list:List<HotelDat
         holder.price.text=list[position].hotelprice
         holder.offpercent.text=list[position].hoteloffer
         holder.rate.text=list[position].hotelrating
-        Glide.with(context).load(list[position].CoverImage).into(holder.galler)
+        Glide.with(context).load(list[position].coverimage).into(holder.galler)
     }
 }
