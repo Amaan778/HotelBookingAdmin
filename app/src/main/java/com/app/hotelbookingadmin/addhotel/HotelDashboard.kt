@@ -47,6 +47,7 @@ class HotelDashboard : AppCompatActivity() {
 
         mList.clear()
 
+
         db=FirebaseFirestore.getInstance()
         db.collection("AllHotels").addSnapshotListener(object : EventListener<QuerySnapshot> {
             override fun onEvent(value: QuerySnapshot?, error: FirebaseFirestoreException?) {
