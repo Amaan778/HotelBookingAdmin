@@ -14,9 +14,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.app.hotelbookingadmin.R
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.yalantis.ucrop.UCrop
 import java.io.File
+import java.util.UUID
 
 class AddHotel : AppCompatActivity() {
     private lateinit var coverimg:ImageView
@@ -29,6 +31,7 @@ class AddHotel : AppCompatActivity() {
     private lateinit var pricing:EditText
     private var coverImageUri: Uri? = null // Cover image URI
     private lateinit var storage: FirebaseStorage
+    private lateinit var firestore: FirebaseFirestore
 
     companion object {
         private const val REQUEST_IMAGE_PICK = 100
@@ -48,6 +51,9 @@ class AddHotel : AppCompatActivity() {
         off=findViewById(R.id.off)
         pricing=findViewById(R.id.pricing)
 
+        firestore = FirebaseFirestore.getInstance()
+        storage = FirebaseStorage.getInstance()
+
         coverbtn.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             startActivityForResult(intent, REQUEST_IMAGE_PICK)
@@ -60,6 +66,8 @@ class AddHotel : AppCompatActivity() {
             val hotelrate=rating.text.toString()
             val hoteloffer=off.text.toString()
             val hotelprice=pricing.text.toString()
+
+            Toast.makeText(this,"button clicked",Toast.LENGTH_LONG).show()
 
             if (hotelname.isEmpty()){
                 title.error="Required"
@@ -87,24 +95,33 @@ class AddHotel : AppCompatActivity() {
                     "hotelprice" to hotelprice
                 )
 
+//                val uuid=UUID.randomUUID().toString()
+//                data["id"]=uuid
+//
+////                            here implement the data for title description and etc,
+//                Toast.makeText(this,"Data Uploading Started",Toast.LENGTH_LONG).show()
+//                savetofirebase(data,uuid)
+
                 coverImageUri?.let {uri->
                     val coverfilename="cover_${System.currentTimeMillis()}.jpg"
                     val storageref=storage.reference.child("images/$coverfilename")
                     storageref.putFile(uri).addOnSuccessListener {
                         storageref.downloadUrl.addOnSuccessListener {coverurl->
+//                            val uuid=UUID.randomUUID().toString()
                             data["coverimage"]=coverurl.toString()
+//                            data["id"]=uuid
 
 //                            here implement the data for title description and etc,
-
+                            Toast.makeText(this,"Data Uploading Started",Toast.LENGTH_LONG).show()
+                            savetofirebase(data,"ii")
 
 
                         }.addOnFailureListener {
                             Toast.makeText(this,"error",Toast.LENGTH_LONG).show()
                         }
+                    } ?: run {
+                        Toast.makeText(this, "Please select a cover image.", Toast.LENGTH_SHORT).show()
                     }
-                        .addOnFailureListener{
-                            Toast.makeText(this,"error",Toast.LENGTH_LONG).show()
-                        }
 
                 }
 
@@ -137,5 +154,29 @@ class AddHotel : AppCompatActivity() {
         }
     }
 
+    private fun savetofirebase(data:HashMap<String, String> , uid:String){
+
+        firestore.collection("AllHotels").document(uid)
+            .set(data)
+            .addOnSuccessListener {
+                resetform()
+                Toast.makeText(this,"Data Uploaded Suceessfully",Toast.LENGTH_LONG).show()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this,"Data was not Uploaded",Toast.LENGTH_LONG).show()
+            }
+
+    }
+
+    private fun resetform(){
+        title.text.clear()
+        address.text.clear()
+        rating.text.clear()
+        off.text.clear()
+        pricing.text.clear()
+
+        coverImageUri=null
+        coverimg.setImageResource(R.drawable.hotelsplash)
+    }
 
 }
