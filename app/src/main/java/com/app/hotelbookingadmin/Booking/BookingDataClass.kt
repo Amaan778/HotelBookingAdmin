@@ -1,4 +1,5 @@
 package com.app.hotelbookingadmin.Booking
 
 class BookingDataClass(val title:String?=null, val hotelnbame:String?=null, val hoteldescription:String?=null, val hoteldetail:String?=null,
-    val remove:String?=null, val check1:String?=null, val check2:String?=null, val check4:String?=null, val check5: String?=null)
+    val remove:String?=null, val check1:String?=null, val check2:String?=null, val check4:String?=null, val check5: String?=null,
+    val check6:String?=null, val check7:String?=null)
