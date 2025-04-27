@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.app.hotelbookingadmin.addhotel.AddHotel
 import com.app.hotelbookingadmin.addhotel.HotelDashboard
+import com.app.hotelbookingadmin.location.LocationActivity
 import com.app.hotelbookingadmin.login.LoginDetails
 
 class Dashboard : AppCompatActivity() {
@@ -38,6 +39,10 @@ class Dashboard : AppCompatActivity() {
 
         login.setOnClickListener {
             startActivity(Intent(this,LoginDetails::class.java))
+        }
+
+        slider.setOnClickListener {
+            startActivity(Intent(this, LocationActivity::class.java))
         }
 
     }
