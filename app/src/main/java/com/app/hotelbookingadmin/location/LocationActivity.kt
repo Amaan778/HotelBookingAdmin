@@ -104,67 +104,6 @@ class LocationActivity : AppCompatActivity() {
             }
     }
 
-
-//    private fun getCurrentLocation() {
-//        if (ActivityCompat.checkSelfPermission(
-//                this,
-//                Manifest.permission.ACCESS_FINE_LOCATION
-//            ) != PackageManager.PERMISSION_GRANTED &&
-//            ActivityCompat.checkSelfPermission(
-//                this,
-//                Manifest.permission.ACCESS_COARSE_LOCATION
-//            ) != PackageManager.PERMISSION_GRANTED
-//        ) {
-//            return
-//        }
-//
-//        fusedLocationClient.lastLocation
-//            .addOnSuccessListener { location: Location? ->
-//                if (location != null) {
-//                    val geocoder = Geocoder(this)
-//                    val addresses = geocoder.getFromLocation(location.latitude, location.longitude, 1)
-//
-//                    if (addresses != null && addresses.isNotEmpty()) {
-//                        val cityName = addresses[0].locality  // City Name
-//                        val countryName = addresses[0].countryName  // Country Name (optional)
-//
-//                        tvLocation.text = "City: $cityName\nCountry: $countryName"
-//                    } else {
-//                        tvLocation.text = "City not found"
-//                    }
-//                } else {
-//                    tvLocation.text = "Location not available"
-//                }
-//            }
-//    }
-
-
-//    private fun getCurrentLocation() {
-//        if (ActivityCompat.checkSelfPermission(
-//                this,
-//                Manifest.permission.ACCESS_FINE_LOCATION
-//            ) != PackageManager.PERMISSION_GRANTED &&
-//            ActivityCompat.checkSelfPermission(
-//                this,
-//                Manifest.permission.ACCESS_COARSE_LOCATION
-//            ) != PackageManager.PERMISSION_GRANTED
-//        ) {
-//            // Permissions are not granted, so just return
-//            return
-//        }
-//
-//        fusedLocationClient.lastLocation
-//            .addOnSuccessListener { location: Location? ->
-//                if (location != null) {
-//                    val latitude = location.latitude
-//                    val longitude = location.longitude
-//                    tvLocation.text = "Latitude: $latitude\nLongitude: $longitude"
-//                } else {
-//                    tvLocation.text = "Location not available"
-//                }
-//            }
-//    }
-
     // Handle permission result
     override fun onRequestPermissionsResult(
         requestCode: Int,
