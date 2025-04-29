@@ -11,6 +11,7 @@ import com.app.hotelbookingadmin.addhotel.AddHotel
 import com.app.hotelbookingadmin.addhotel.HotelDashboard
 import com.app.hotelbookingadmin.location.LocationActivity
 import com.app.hotelbookingadmin.login.LoginDetails
+import com.app.hotelbookingadmin.notification.NotificationActivity
 
 class Dashboard : AppCompatActivity() {
     private lateinit var category:TextView
@@ -43,6 +44,10 @@ class Dashboard : AppCompatActivity() {
 
         slider.setOnClickListener {
             startActivity(Intent(this, LocationActivity::class.java))
+        }
+
+        notification.setOnClickListener {
+            startActivity(Intent(this,NotificationActivity::class.java))
         }
 
     }
