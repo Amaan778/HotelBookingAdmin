@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.app.hotelbookingadmin.Booking.BookingDetails
 import com.app.hotelbookingadmin.addhotel.AddHotel
 import com.app.hotelbookingadmin.addhotel.HotelDashboard
 import com.app.hotelbookingadmin.location.LocationActivity
@@ -48,6 +49,10 @@ class Dashboard : AppCompatActivity() {
 
         notification.setOnClickListener {
             startActivity(Intent(this,NotificationActivity::class.java))
+        }
+
+        bookings.setOnClickListener {
+            startActivity(Intent(this,BookingDetails::class.java))
         }
 
     }
